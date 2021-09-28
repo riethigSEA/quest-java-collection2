@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.*;
 
 public class Thanos {
 
@@ -15,12 +16,14 @@ public class Thanos {
 
 
         System.out.println("\nOrder by name:");
+        Collections.sort(heroes);
         showList(heroes);
 
         // TODO 2: Add a Comparator and sort by age (descending)
 
 
         System.out.println("\nOrder by age:");
+        heroes.sort(Comparator.comparing(Hero::getAge).reversed());
         showList(heroes);
     }
 
